@@ -52,9 +52,9 @@ if __name__ == "__main__":
             actual = actual.siguiente
             contador += 1
 
-    print("\nSISTEMA DE GRADOS DE CONEXIÓN")
+    print("\ngrados de conexion.")
     for i in range(3):
-        entrada = input(f"\n[{i+1}/3] Ingrese el nombre del usuario para calcular su grafo: ")
+        entrada = input(f"\n[{i+1}/3] Ingrese el nombre del usuario para el grafo: ")
 
         candidatos = resolver_usuario(entrada, jugadores, indice_nombres)
 
@@ -76,11 +76,11 @@ if __name__ == "__main__":
             print("El usuario no existe en la red")
         else:
             print(f"Usuario raíz: {formatear_contacto(usuario_id, jugadores)}")
-            print("Contactos de 1° Grado (Amigos directos):")
+            print("Contactos de 1 Grado (Amigos directos):")
             print(*(f"     {formatear_contacto(pid, jugadores)}" for pid in g1), sep="\n") if g1 else print("     (ninguno)")
-            print("Contactos de 2° Grado (Amigos de amigos):")
+            print("Contactos de 2 Grado (Amigos de amigos):")
             print(*(f"     {formatear_contacto(pid, jugadores)}" for pid in g2), sep="\n") if g2 else print("     (ninguno)")
-            print("Contactos de 3° Grado (Amigos lejanos):")
+            print("Contactos de 3 Grado (Amigos lejanos):")
             print(*(f"     {formatear_contacto(pid, jugadores)}" for pid in g3), sep="\n") if g3 else print("     (ninguno)")
 
     # entrega 3
